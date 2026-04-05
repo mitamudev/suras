@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stand Upright Rebooted Admin Status</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <div>
+          <h1 class="title">Stand Upright Rebooted Admin Status</h1>
+          <div class="subtitle">
+            เช็คว่าแอดมินคนไหนกำลังออนไลน์อยู่ เพื่อความปลอดภัยในการเทรด
+          </div>
+        </div>
+        <div class="meta">
+          <div class="meta-row">
+            <span class="meta-label">อัปเดตล่าสุด</span>
+            <span id="lastUpdated" class="meta-value">-</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">รีเฟรช</span>
+            <span class="meta-value">ทุก 20 วินาที</span>
+          </div>
+        </div>
+      </header>
+
+      <section id="riskPanel" class="risk-panel risk-unknown">
+        <div class="risk-head">
+          <div class="risk-title">ความปลอดภัยในการเทรด</div>
+          <div id="riskCount" class="risk-count">-</div>
+        </div>
+        <div id="riskLabel" class="risk-label">กำลังประเมิน...</div>
+        <div id="riskDesc" class="risk-desc">
+          ยิ่งแอดมินออนไลน์เยอะ ยิ่งไม่ปลอดภัย
+        </div>
+        <div class="risk-bar">
+          <div id="riskFill" class="risk-fill" style="width: 0%"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div id="error" class="error hidden"></div>
+        <div id="loading" class="loading">กำลังโหลดสถานะ...</div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ผู้ใช้</th>
+                <th>สถานะ</th>
+                <th>เกมที่เล่น / ล่าสุด</th>
+                <th>โปรไฟล์</th>
+                <th>Join</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
